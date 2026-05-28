@@ -4,6 +4,9 @@ pipeline {
             label 'pytest_run'
             }
       }
+    triggers {
+        pollSCM '*/1 * * * *'
+    }
     stages {
         stage('Build') {
             steps {
